@@ -1,0 +1,108 @@
+div {
+  box-sizing: border-box;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  display: block;
+  margin: 2em auto;
+  width: 90%;
+  max-width: 70em;
+}
+
+.coin-icon {
+  height: 2em;
+  width: 2em;
+  margin-right: 10px;
+}
+.coin-h1 {
+  font-size: 16px;
+  width: 150px;
+}
+
+.flex-table {
+  display: -webkit-box;
+  display: flex;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.flex-table:first-of-type {
+  border-top: solid 1px;
+  border-right: solid 1px;
+}
+.flex-table:first-of-type .flex-row {
+  /* background: #1976d2;
+  color: white;
+  border-color: #1565c0; */
+}
+.flex-table.row:nth-child(odd) .flex-row {
+}
+.flex-table:hover {
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.flex-row {
+  /* width: calc(100% / 6); */
+  flex: 1;
+  text-align: center;
+  padding: 0.5em 0.5em;
+  border-bottom: solid 1px #d9d9d9;
+  border-right: solid 1px #d9d9d9;
+}
+
+.first-coin {
+  flex: 2;
+}
+
+.flex-row.coin {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  flex: 1.5;
+}
+
+@media all and (max-width: 767px) {
+  .flex-row {
+    width: calc(100% / 3);
+  }
+  .flex-row.first {
+    width: 100%;
+  }
+
+  .column {
+    width: 100%;
+  }
+}
+@media all and (max-width: 430px) {
+  .flex-table .flex-row {
+    border-bottom: 0;
+  }
+  .flex-table .flex-row:last-of-type {
+    border-bottom: solid 1px #d9d9d9;
+  }
+
+  .header .flex-row {
+    border-bottom: solid 1px;
+  }
+
+  .flex-row {
+    width: 100%;
+  }
+  .flex-row.first {
+    width: 100%;
+    border-bottom: solid 1px #d9d9d9;
+  }
+
+  .column {
+    width: 100%;
+  }
+  .column .flex-row {
+    border-bottom: solid 1px #d9d9d9;
+  }
+
+  .flex-cell {
+    width: 100%;
+  }
+}
